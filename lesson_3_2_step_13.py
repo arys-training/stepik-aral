@@ -6,7 +6,7 @@ import unittest
 
 class TestRegistration(unittest.TestCase):
 
-    def registration1(self):
+    def test_registration1(self):
 
         link = "http://suninjuly.github.io/registration1.html"
         browser = webdriver.Chrome()
@@ -31,10 +31,10 @@ class TestRegistration(unittest.TestCase):
         welcome_text = welcome_text_elt.text
 
         # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
-        self.assertEqual("Congratulations! You have successfully registered!" == welcome_text, \
+        self.assertEqual(welcome_text, "Congratulations! You have successfully registered!", \
             "Registration #1 is failed")
 
-    def registration2(self):
+    def test_registration2(self):
 
         link = "http://suninjuly.github.io/registration2.html"
         browser = webdriver.Chrome()
@@ -59,8 +59,8 @@ class TestRegistration(unittest.TestCase):
         welcome_text = welcome_text_elt.text
 
         # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
-        self.assertEqual("Congratulations! You have successfully registered!" == welcome_text, \
-            "Registration #1 is failed")
+        self.assertEqual(welcome_text, "Congratulations! You have successfully registered!", \
+            "Registration #2 is failed")
 
 if __name__ == "__main__":
     unittest.main()
