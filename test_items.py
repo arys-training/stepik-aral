@@ -9,7 +9,7 @@ def test_check_add_to_basket_button(browser):
     browser.get(link)
     time.sleep(3)
     try:
-        assert browser.find_element(By.CSS_SELECTOR, "button.btn-add-to-basket3")
+        assert browser.find_element(By.CSS_SELECTOR, "button.btn-add-to-basket")
     except:
         print("\033[1;31;91mНа странице отсутствует кнопка добавления в корзину\033[0m")
         raise
